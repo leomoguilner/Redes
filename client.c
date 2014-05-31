@@ -255,7 +255,7 @@ int main(int argc, char *argv[])
     memset(&server_info, 0, sizeof(server_info));
 
     server_info.sin_family = AF_INET;   // datos de la familia de la direc
-    server_info.sin_port = htons(PORT); // port TCP
+    server_info.sin_port = htons(atoi(argv[1])); // port TCP
     server_info.sin_addr.s_addr = INADDR_ANY; //direccion de internet
    
    // establecemos la conexion con el socket y se define el puntero del struct sockaddr
